@@ -1,0 +1,18 @@
+
+<div class="right-section">
+  <mat-icon class="user-icon">account_circle</mat-icon>
+  <span class="username">{{ user.selectedUser()?.userName }}</span>
+
+  <span class="divider">|</span>
+
+  <a href="#" (click)="logout()" class="logout-link">
+    <mat-icon class="logout-icon">logout</mat-icon>
+    התנתק
+  </a>
+</div>
+
+
+<ng-template #empty></ng-template>
+
+<hr />
+<router-outlet></router-outlet>

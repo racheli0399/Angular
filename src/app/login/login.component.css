@@ -1,0 +1,46 @@
+.login-container {
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }
+  
+  .login-card {
+    width: 350px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f5e6da; 
+    color: #000;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .text-center {
+    text-align: center;
+    color: #000;
+  }
+  .full-width {
+    width: 100%;
+  }
+  button.mat-raised-button {
+    background-color: #fff !important;
+    color: #000 !important;
+    font-weight: 600;
+  }
+  button.mat-raised-button:hover {
+    background-color: #eee !important;
+  }
+  .error-msg {
+    color: #b00020;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .link {
+    color: #1976d2; 
+    text-decoration: none;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  

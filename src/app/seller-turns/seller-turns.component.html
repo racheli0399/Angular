@@ -1,0 +1,61 @@
+<div class="container">
+
+  <div class="header">
+    <button mat-flat-button color="primary" class="back-button" (click)="toggleAddTurnForm()">
+      <mat-icon>add</mat-icon>
+      הוספת תור חדש
+    </button>
+    
+    <h2 class="title">ניהול תורים</h2>
+  </div>
+
+  <div *ngIf="showAddTurnForm" class="add-turn-container">
+    <app-add-turn
+      [sellerId]="currentSellerId"
+      (turnAdded)="onTurnAdded()"
+      (cancel)="toggleAddTurnForm()">
+    </app-add-turn>
+  </div>
+
+  <table mat-table [dataSource]="turns" class="mat-elevation-z8 turns-table">
+
+    <!-- תאריך -->
+    <ng-container matColumnDef="day">
+      <th mat-header-cell *matHeaderCellDef> תאריך </th>
+      <td mat-cell *matCellDef="let turn"> {{ turn.day }} </td>
+    </ng-container>
+
+    <!-- שעה -->
+    <ng-container matColumnDef="hour">
+      <th mat-header-cell *matHeaderCellDef> שעה </th>
+      <td mat-cell *matCellDef="let turn"> {{ turn.hour }} </td>
+    </ng-container>
+
+   <!-- שם לקוחה -->
+<ng-container matColumnDef="customer">
+  <th mat-header-cell *matHeaderCellDef> שם לקוחה </th>
+  <td mat-cell *matCellDef="let turn">
+    {{ turn.customer?.user.userName || 'תור פנוי' }}
+  </td>
+</ng-container>
+
+
+    <!-- פעולה -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef> בוצע </th>
+      <td mat-cell *matCellDef="let turn">
+        <button mat-icon-button color="primary" (click)="markTurnAsDone(turn.id)">
+          <mat-icon>check_circle</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <div *ngIf="turns.length === 0" class="empty-message">
+    אין לך תורים.
+  </div>
+
+</div>

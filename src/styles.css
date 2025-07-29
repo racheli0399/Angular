@@ -1,0 +1,39 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    border-radius: 16px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .error-msg {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+    }
+    .background {
+      background-image: url('./assets/background.jpg'); /* שימי את התמונה בתיקיית assets */
+      background-size: cover; /* עושה שהתמונה תכסה את כל המסך */
+      background-position: center; /* ממקמת את התמונה במרכז */
+      background-repeat: no-repeat; /* מונע חזרות של התמונה */
+      background-attachment: fixed;
+      min-height: 100vh; /* גובה מינימלי של כל המסך */
+    }
+    
+  
+  .link {
+    color: #00796b;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,94 @@
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f5e6da;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000 !important;
+  background-color: #fff !important;
+  border: 1px solid #bbb;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.add-turn-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.back-button:hover {
+  background-color: #eee !important;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #000;
+}
+
+.turns-table {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-header-cell {
+  background-color: #d7ccc8;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #000;
+}
+
+.mat-cell {
+  font-size: 1rem;
+  padding: 16px 12px;
+  color: #000;
+}
+
+.empty-message {
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.mat-button, .mat-raised-button, .mat-flat-button {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid #bbb;
+}
+
+.mat-button:hover, .mat-raised-button:hover, .mat-flat-button:hover {
+  background-color: #eee !important;
+}
+
+.add-turn-container {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border-radius: 8px;
+}

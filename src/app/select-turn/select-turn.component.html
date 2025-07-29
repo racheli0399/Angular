@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="header">
+      <a mat-flat-button color="primary" routerLink="/my-turn" class="back-button">
+        <mat-icon>arrow_back</mat-icon>
+        חזרה לרשימת התורים שלי
+      </a>
+      <h2 class="title">בחירת תור</h2>
+    </div>
+  
+    <table mat-table [dataSource]="turns" class="mat-elevation-z8 turns-table">
+  
+      <!-- Day Column -->
+      <ng-container matColumnDef="day">
+        <th mat-header-cell *matHeaderCellDef> תאריך </th>
+        <td mat-cell *matCellDef="let turn"> {{ turn.day }} </td>
+      </ng-container>
+  
+      <!-- Hour Column -->
+      <ng-container matColumnDef="hour">
+        <th mat-header-cell *matHeaderCellDef> שעה </th>
+        <td mat-cell *matCellDef="let turn"> {{ turn.hour }} </td>
+      </ng-container>
+  
+      <!-- Seller Column -->
+      <ng-container matColumnDef="seller">
+        <th mat-header-cell *matHeaderCellDef> שם פאנית </th>
+      <td mat-cell *matCellDef="let turn"> {{ turn.seller.user.userName || '--' }} </td>
+      </ng-container>
+  
+   <!-- Select Button -->
+<ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>  </th>
+    <td mat-cell *matCellDef="let turn">
+      <button mat-flat-button color="accent" (click)="selectTurn(turn.id)">
+        <mat-icon>check_circle</mat-icon>
+        לבחירה
+      </button>
+    </td>
+  </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="['day', 'hour', 'seller', 'select']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['day', 'hour', 'seller', 'select'];"></tr>
+    </table>
+  
+    <div *ngIf="turns.length === 0" class="empty-message">
+      אין תורים זמינים לבחירה.
+    </div>
+  </div>
+  

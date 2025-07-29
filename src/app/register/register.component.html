@@ -1,0 +1,44 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <h2 class="text-center">הרשמה</h2>
+
+    <form (ngSubmit)="onRegister()" class="form">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>שם משתמש</mat-label>
+        <input matInput [(ngModel)]="customer.userName" name="userName" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>סיסמה</mat-label>
+        <input matInput type="password" [(ngModel)]="customer.password" name="password" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>טלפון</mat-label>
+        <input matInput [(ngModel)]="customer.phoneNumber" name="phoneNumber" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>שנות ותק</mat-label>
+        <input matInput type="number" [(ngModel)]="customer.yearsOfSeniority" name="yearsOfSeniority" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>הרשאה</mat-label>
+        <mat-select [(ngModel)]="customer.role" name="role">
+          <mat-option [value]="1">לקוחה</mat-option>
+          <mat-option [value]="2">פאנית</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-raised-button color="accent" type="submit" class="full-width">הרשמה</button>
+
+      <div *ngIf="errorMsg" class="error-msg">{{ errorMsg }}</div>
+
+      <p class="text-center mt-2">
+        כבר רשום?
+        <a routerLink="/login" class="link">התחבר</a>
+      </p>
+    </form>
+  </mat-card>
+</div>

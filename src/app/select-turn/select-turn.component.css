@@ -1,0 +1,80 @@
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #f5e6da; /* רקע חום בהיר */
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #000; /* טקסט שחור */
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+  
+  .back-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000 !important;
+    background-color: #fff !important;
+    border: 1px solid #bbb;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .back-button:hover {
+    background-color: #eee !important;
+  }
+  
+  .title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #000; /* שחור */
+  }
+  
+  .turns-table {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  
+  .mat-header-cell {
+    background-color: #d7ccc8; /* גוון חום-בהיר יותר */
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #000;
+  }
+  
+  .mat-cell {
+    font-size: 1rem;
+    padding: 16px 12px;
+    color: #000;
+  }
+  
+  .empty-message {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+    font-style: italic;
+    font-size: 1.1rem;
+  }
+  
+  /* כפתור בחירה */
+  button, .mat-flat-button, .mat-raised-button {
+    background-color: #fff !important;  /* לבן */
+    color: #000 !important;             /* שחור */
+    border: 1px solid #bbb;
+    font-weight: 500;
+  }
+  
+  button:hover, .mat-flat-button:hover, .mat-raised-button:hover {
+    background-color: #eee !important;
+  }
+  
